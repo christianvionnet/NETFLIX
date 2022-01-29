@@ -1,0 +1,286 @@
+* {
+  font-family: sans-serif;
+  color: var(--dark-grey-3);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #e50914;
+  --red-hover: #f6121d;
+  --black: #000;
+  --white: #fff;
+  --white-fafafa: #fafafa;
+  --light-grey: #757575;
+  --light-grey-2: #8c8c8c;
+  --light-grey-33: #f3f3f3;
+  --dark-grey: #303030;
+  --dark-grey-2: #221f1f;
+  --dark-grey-3: #333333;
+  --contact: #eaeae6;
+  --contact-button: #4c4948;
+  --contact-button-hover: #f5f5f1;
+  --footer-a: #8b8a88;
+  --border-left: #d5d4d1;
+  --join-hover: #eaeae6;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+path {
+  color: var(--red);
+}
+
+.checkmark-group--icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+  fill: var(--red);
+}
+
+.svg-icon {
+  width: 74px;
+
+  fill: var(--red);
+}
+
+br {
+  margin-top: 5em;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 1em 0.4em;
+  border-bottom: 1px solid var(--border-left);
+}
+
+.header__login {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main {
+  padding-bottom: 120px;
+}
+
+.landing__1 {
+  width: 100%;
+  padding: 1em 2em 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.landing__2 {
+  width: 100%;
+  padding: 2em 2em 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.landing__card {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5em;
+}
+
+.landing__img--container {
+  margin-top: 30%;
+}
+
+.landing__img {
+  width: 50px;
+  margin-bottom: 1.5em;
+}
+
+.landing__steps p {
+  font-size: 13px;
+  margin-bottom: 0.5em;
+}
+
+.landing__h2 {
+  font-size: 32px;
+  margin-bottom: 1em;
+}
+
+.landing__item {
+  width: 90%;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.landing__item p {
+  width: 100%;
+}
+
+.landing__item p {
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+.landing__button {
+  width: 100%;
+  color: var(--white);
+  background: var(--red);
+  border: none;
+  border-radius: 0.2em;
+  font-size: 24px;
+  padding: 0.8em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.landing__button:hover {
+  background-color: var(--red-hover);
+}
+
+.landing__plan {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.landing__plan div {
+  color: var(--white);
+  background: var(--red);
+  opacity: 0.6;
+  padding: 1.5em 1em;
+  border-radius: 0.2em;
+  font-weight: 600;
+}
+
+.footer {
+  background-color: var(--light-grey-33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0 1em;
+  border-top: 1px solid var(--border-left);
+}
+
+.footer__center {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.footer__a {
+  font-size: 0.8em;
+  color: var(--light-grey);
+  margin: 0.5em 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer__li {
+  line-height: 1;
+  width: 100%;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.footer__p {
+  margin: 0 0 1em;
+  color: var(--light-grey);
+  font-size: 1em;
+}
+
+.footer__p a {
+  color: var(--light-grey);
+}
+
+.footer__ul {
+  list-style-type: none;
+  margin: 0 0 0.5em;
+  display: grid;
+  grid-template: ". ." ". ." ". ." ". ." ". ." ". .";
+}
+
+.footer__language {
+  background: var(--white);
+  border-radius: 0.2em;
+  padding: 1em 1.5em;
+  font-size: 1em;
+  color: var(--light-grey);
+  border: 1px solid var(--light-grey-2);
+}
+
+.lang-0,
+.lang-1 {
+  background-color: var(--black);
+  font-size: 0.8em;
+}
+
+.footer__country {
+  font-size: 0.8em;
+  color: var(--light-grey);
+  margin: 1.5em 0 0;
+}
+
+@media screen and (min-width: 500px) {
+  .svg-icon {
+    width: 167px;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 501px) {
+  .footer__center {
+    width: 100%;
+    padding: 0 2em;
+  }
+
+  .footer__ul {
+    list-style-type: none;
+    display: grid;
+    grid-template: ". . ." ". . .";
+  }
+
+  .footer__li {
+    padding: 0 0.5em;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .landing__img--container,
+  .landing__steps,
+  .landing__h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .landing__item {
+    padding: 0 1em;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .header__nav {
+    padding: 1.5em 2.5em 1em;
+  }
+
+  .header__login {
+    font-size: 19px;
+  }
+
+  .footer__ul {
+    grid-template: ". . . ." ". . . .";
+  }
+}

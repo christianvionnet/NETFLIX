@@ -1,0 +1,305 @@
+* {
+  font-family: sans-serif;
+  color: var(--light-grey);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #e50914;
+  --red-hover: #d30206;
+  --black: #000;
+  --white: #fff;
+  --white-fafafa: #fafafa;
+  --light-grey: #757575;
+  --light-grey-2: #8c8c8c;
+  --dark-grey: #303030;
+  --dark-grey-2: #221f1f;
+  --contact: #eaeae6;
+  --contact-button: #4c4948;
+  --contact-button-hover: #f5f5f1;
+  --footer-a: #8b8a88;
+  --border-left: #d5d4d1;
+  --join-hover: #eaeae6;
+  --input: #333333;
+  --captcha: #0071eb;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  width: 100%;
+  background-color: var(--black);
+}
+
+.header {
+  position: relative;
+}
+
+.header__img {
+  width: 100px;
+  padding: 0.4em 0.2em;
+}
+
+.landing {
+  padding: 0 5%;
+  background-color: var(--black);
+}
+
+.landing__h2 {
+  color: var(--white);
+  font-size: 32px;
+  padding-bottom: 1em;
+}
+
+.landing__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1em;
+}
+
+.landing__input {
+  padding: 1.3em 1em;
+  border: none;
+  border-radius: 0.2em;
+  margin-bottom: 1.2em;
+  background-color: var(--input);
+}
+
+.landing__input::placeholder {
+  font-size: 15px;
+}
+
+.landing__button {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 0.2em;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1em 0;
+  margin: 1.5em 0 1em;
+}
+
+.landing__div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.landing__div div {
+  display: flex;
+  align-items: center;
+}
+
+.landing__div label {
+  padding-left: 0.3em;
+}
+
+.landing__remember-me {
+  width: 18px;
+  height: 18px;
+}
+
+.landing__media {
+  position: relative;
+  font-size: 13px;
+  padding: 1.8em 0;
+  padding-left: 2.5em;
+}
+
+.landing__media ::before {
+  content: "";
+  background: url(https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png)
+    no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+}
+
+.landing__first-time {
+  padding: 1em 0;
+}
+
+.landing__first-time a {
+  color: var(--white);
+}
+
+.landing p {
+  font-size: 13px;
+}
+
+.landing__captcha {
+  display: inline-block;
+  height: 150px;
+}
+
+.landing__captcha a {
+  display: inline;
+  font-size: 13px;
+
+  color: var(--captcha);
+}
+
+.footer {
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1.5em 3em;
+  border-top: 1px solid var(--light-grey);
+}
+
+.footer__center {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.footer__a {
+  font-size: 0.8em;
+  color: var(--light-grey);
+  margin: 0.5em 0;
+}
+
+.footer__a:hover {
+  text-decoration: underline;
+}
+
+.footer__li {
+  line-height: 1;
+  width: 100%;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.footer__p {
+  margin: 0 0 1em;
+  color: var(--light-grey);
+  font-size: 1em;
+}
+
+.footer__ul {
+  list-style-type: none;
+  margin: 0 0 1.5em;
+  display: grid;
+  grid-template: ". ." ". ." ". ." ". ." ". ." ". .";
+}
+
+.footer__language {
+  background: transparent;
+  border-radius: 0.2em;
+  padding: 1em 1.5em;
+  font-size: 1em;
+  color: #999;
+  border: 1px solid var(--white);
+}
+
+.lang-0,
+.lang-1 {
+  background-color: var(--black);
+  font-size: 0.8em;
+}
+
+.footer__country {
+  font-size: 0.8em;
+  color: var(--light-grey);
+  margin: 1.5em 0 0;
+}
+
+@media screen and (min-width: 501px) {
+  .landing__media {
+    padding: 0.3em 0;
+    padding-left: 2.5em;
+  }
+
+  .footer__center {
+    width: 100%;
+  }
+
+  .footer__ul {
+    list-style-type: none;
+    margin: 0 0 1.5em;
+    display: grid;
+    grid-template: ". . ." ". . .";
+  }
+
+  .footer__li {
+    padding: 0 0.5em;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .header__img {
+    width: 200px;
+    padding: 0.4em 0.4em 0;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  html {
+    background-size: cover;
+    display: block;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background: url(https://assets.nflxext.com/ffe/siteui/vlv3/8f3e38a9-1c2c-4818-99b5-2d9bdff9ad1d/ce41685c-b15d-4a16-9940-872a182a80f5/AR-es-20220124-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 200%; */
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  .body {
+    background: transparent;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .landing {
+    width: 450px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.3em;
+    padding: 3.5em 4em 2.5em;
+    margin-bottom: 5em;
+  }
+
+  .overlay {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+    background: rgba(0, 0, 0, 0.5);
+    /* padding: 1.5em 1em; */
+  }
+
+  .footer {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+  }
+
+  .footer__ul {
+    grid-template: ". . . ." ". . . .";
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="icon"
+      href="https://cdn.icon-icons.com/icons2/2699/PNG/512/netflix_logo_icon_170919.png"
+    />
+    <title>Netflix</title>
+  </head>
+  <body class="body">
+    <div class="overlay">
+      <header class="header">
+        <h1 class="header__h1">
+          <a href="#" title="Netflix" class="header__a">
+            <img
+              src="https://fontmeme.com/permalink/211112/405643f5d39e2888ac30dc27cf1dc959.png"
+              alt="Netflix"
+              class="header__img before__img"
+            />
+          </a>
+        </h1>
+      </header>
+      <main class="main">
+        <article class="landing">
+          <form class="landing__form" action="">
+            <h2 class="landing__h2">Inicia sesión</h2>
+            <input
+              class="landing__input"
+              type="text"
+              placeholder="Email o número de teléfono"
+            />
+            <input
+              class="landing__input"
+              type="password"
+              placeholder="Contraseña"
+            />
+            <button class="landing__button" type="submit">
+              Iniciar sesión
+            </button>
+            <div class="landing__div">
+              <div>
+                <input
+                  class="landing__remember-me"
+                  type="checkbox"
+                  id="remember-me"
+                />
+                <label for="remember-me">Recuérdame</label>
+              </div>
+              <a class="landing__help" href="#">¿Necesitas ayuda?</a>
+            </div>
+          </form>
+          <div class="landing__media">
+            <a href="#">Iniciar sesión con Facebook</a>
+          </div>
+          <div class="landing__first-time">
+            <span>¿Primera vez en Netflix?</span>
+            <a href="#">Suscribite ya</a>
+          </div>
+          <div class="landing__captcha">
+            <p>
+              Esta página está protegida por Google reCAPTCHA para comprobar que
+              no eres un robot. <a href="#">Más info.</a>
+            </p>
+          </div>
+        </article>
+      </main>
+      <footer class="footer">
+        <div class="footer__center">
+          <p class="footer__p">¿Preguntas? Llama al 0-800-666-2803</p>
+
+          <ul class="footer__ul">
+            <li class="footer__li">
+              <a href="#" class="footer__a" title="Preguntas frecuentes"
+                >Preguntas frecuentes</a
+              >
+            </li>
+            <li class="footer__li">
+              <a href="#" class="footer__a" title="Centro de ayuda"
+                >Centro de ayuda</a
+              >
+            </li>
+            <li class="footer__li">
+              <a href="#" class="footer__a" title="Términos de uso"
+                >Términos de uso</a
+              >
+            </li>
+            <li class="footer__li">
+              <a href="#" class="footer__a" title="Privacidad">Privacidad</a>
+            </li>
+            <li class="footer__li">
+              <a href="#" class="footer__a" title="Preferencias de cookies"
+                >Preferencias de cookies</a
+              >
+            </li>
+            <li class="footer__li">
+              <a href="#" class="footer__a" title="Información corporativa"
+                >Información corporativa</a
+              >
+            </li>
+          </ul>
+          <select class="footer__language">
+            <option
+              class="lang-0"
+              lang="es"
+              data-language="es"
+              data-country="AR"
+            >
+              Español
+            </option>
+            <option
+              class="lang-1"
+              lang="en"
+              data-language="en"
+              data-country="AR"
+            >
+              English
+            </option>
+          </select>
+        </div>
+      </footer>
+    </div>
+    <script src="/js/login.js"></script>
+  </body>
+</html>
