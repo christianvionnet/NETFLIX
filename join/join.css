@@ -11,10 +11,12 @@
   --red-hover: #f6121d;
   --black: #000;
   --white: #fff;
+  --a: #0071eb;
   --white-fafafa: #fafafa;
   --light-grey: #757575;
   --light-grey-2: #8c8c8c;
   --light-grey-33: #f3f3f3;
+  --light-grey-4: #737373;
   --dark-grey: #303030;
   --dark-grey-2: #221f1f;
   --dark-grey-3: #333333;
@@ -87,7 +89,7 @@ br {
 
 .landing__2 {
   width: 100%;
-  padding: 2em 2em 3em;
+  padding: 2em 1em 3em;
   display: flex;
   justify-content: center;
 }
@@ -96,7 +98,14 @@ br {
   max-width: 360px;
   display: flex;
   flex-direction: column;
+}
+
+.landing__card--1 {
   padding: 0 0.5em;
+}
+
+.landing__card--2 {
+  /* padding: 0 1em; */
 }
 
 .landing__img--container {
@@ -106,6 +115,11 @@ br {
 .landing__img {
   width: 50px;
   margin-bottom: 1.5em;
+}
+
+.landing__steps--container,
+.landing__info {
+  padding: 0 1em;
 }
 
 .landing__steps p {
@@ -152,16 +166,77 @@ br {
 .landing__plan {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.landing__plan {
+  position: sticky;
+  top: 0;
+  padding: 0.5em 0;
+  /* margin: 0.5em 0; */
+  background: var(--white);
 }
 
 .landing__plan div {
+  width: 31%;
   color: var(--white);
   background: var(--red);
   opacity: 0.6;
   padding: 1.5em 1em;
-  border-radius: 0.2em;
+  border-radius: 0.1em;
   font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+.landing__plan div::after {
+  content: "";
+  display: none;
+  border: 0 solid transparent;
+  border-top-color: var(--red);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px;
+}
+
+.landing__tbody tr {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+.landing__tr {
+  border-bottom: 1px solid var(--join-hover);
+}
+
+.landing__tr td {
+  width: 33%;
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: 600;
+  color: var(--light-grey-4);
+}
+
+.landing__tr td:nth-child(1) {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.landing__tr path {
+  color: var(--light-grey-4);
+}
+
+.landing__info p {
+  font-size: 13px;
+  color: var(--light-grey-4);
+}
+
+.landing__info a {
+  color: var(--a);
 }
 
 .footer {
