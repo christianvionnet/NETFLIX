@@ -189,9 +189,37 @@ br {
   position: relative;
 }
 
-.landing__plan div::after {
+/* .landing__plan div:nth-of-type(3) {
+  opacity: 1;
+} */
+
+/* .landing__plan div::after {
   content: "";
-  display: none;
+  display: block;
+  border: 0 solid transparent;
+  border-top-color: var(--red);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px;
+} */
+
+.after {
+  opacity: 1 !important;
+}
+
+.red {
+  color: var(--red);
+}
+
+.grey {
+  color: var(--light-grey-4);
+}
+
+.after::after {
+  content: "";
+  display: block;
   border: 0 solid transparent;
   border-top-color: var(--red);
   position: absolute;
