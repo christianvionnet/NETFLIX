@@ -95,7 +95,6 @@ br {
 }
 
 .landing__card {
-  max-width: 360px;
   display: flex;
   flex-direction: column;
 }
@@ -105,7 +104,7 @@ br {
 }
 
 .landing__card--2 {
-  /* padding: 0 1em; */
+  max-width: 978px;
 }
 
 .landing__img--container {
@@ -122,6 +121,10 @@ br {
   padding: 0 1em;
 }
 
+.landing__steps--container {
+  margin-bottom: 1em;
+}
+
 .landing__steps p {
   font-size: 13px;
   margin-bottom: 0.5em;
@@ -135,7 +138,6 @@ br {
 .landing__item {
   width: 90%;
   display: flex;
-  margin-bottom: 1em;
 }
 
 .landing__item p {
@@ -149,6 +151,7 @@ br {
 
 .landing__button {
   width: 100%;
+  max-width: 440px;
   color: var(--white);
   background: var(--red);
   border: none;
@@ -163,22 +166,26 @@ br {
   background-color: var(--red-hover);
 }
 
+.landing__plans--container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: var(--white);
+}
+
 .landing__plan {
   width: 100%;
   display: flex;
   justify-content: space-around;
-}
-
-.landing__plan {
-  position: sticky;
-  top: 0;
   padding: 0.5em 0;
-  /* margin: 0.5em 0; */
-  background: var(--white);
 }
 
 .landing__plan div {
   width: 31%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--white);
   background: var(--red);
   opacity: 0.6;
@@ -189,32 +196,8 @@ br {
   position: relative;
 }
 
-/* .landing__plan div:nth-of-type(3) {
-  opacity: 1;
-} */
-
-/* .landing__plan div::after {
-  content: "";
-  display: block;
-  border: 0 solid transparent;
-  border-top-color: var(--red);
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 15px;
-} */
-
 .after {
   opacity: 1 !important;
-}
-
-.red {
-  color: var(--red);
-}
-
-.grey {
-  color: var(--light-grey-4);
 }
 
 .after::after {
@@ -229,8 +212,18 @@ br {
   border-width: 15px;
 }
 
+.landing__table {
+  width: 100%;
+}
+
+.landing__tbody {
+  width: 100%;
+}
+
 .landing__tbody tr {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin: 1em 0;
 }
@@ -239,12 +232,16 @@ br {
   border-bottom: 1px solid var(--join-hover);
 }
 
+.landing__tbody :nth-of-type(4) {
+  border-bottom: none;
+}
+
 .landing__tr td {
   width: 33%;
   text-align: center;
   margin-bottom: 1em;
   font-weight: 600;
-  color: var(--light-grey-4);
+  color: var(--dark-grey-3);
 }
 
 .landing__tr td:nth-child(1) {
@@ -270,7 +267,6 @@ br {
 .footer {
   background-color: var(--light-grey-33);
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 2em 0 1em;
   border-top: 1px solid var(--border-left);
@@ -278,7 +274,7 @@ br {
 
 .footer__center {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1050px;
 }
 
 .footer__a {
@@ -347,17 +343,13 @@ a:hover {
 @media screen and (min-width: 501px) {
   .footer__center {
     width: 100%;
-    padding: 0 2em;
+    padding: 0 3em;
   }
 
   .footer__ul {
     list-style-type: none;
     display: grid;
     grid-template: ". . ." ". . .";
-  }
-
-  .footer__li {
-    padding: 0 0.5em;
   }
 }
 
@@ -366,11 +358,55 @@ a:hover {
   .landing__steps,
   .landing__h2 {
     display: flex;
-    justify-content: center;
   }
 
-  .landing__item {
-    padding: 0 1em;
+  .landing__plans--container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .landing__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing__info p {
+    padding-right: 150px;
+  }
+
+  .landing__plan {
+    width: 62%;
+    margin-bottom: 0.5em;
+  }
+
+  .landing__plan div {
+    width: 90px;
+    height: 90px;
+  }
+
+  .landing__tbody tr {
+    flex-wrap: nowrap;
+  }
+
+  .landing__tr td {
+    width: 22%;
+  }
+
+  .landing__tr :nth-child(1) {
+    width: 40% !important;
+    font-size: 16px !important;
+    text-align: start !important;
+    padding-left: 1em;
+  }
+
+  .landing__tr td > svg {
+    padding-left: 0 !important;
+  }
+
+  .after::after {
+    border-width: 10px;
   }
 }
 
@@ -385,5 +421,12 @@ a:hover {
 
   .footer__ul {
     grid-template: ". . . ." ". . . .";
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .landing__plan div {
+    width: 120px;
+    height: 120px;
   }
 }
