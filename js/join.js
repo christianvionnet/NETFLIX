@@ -1,13 +1,20 @@
 const card_1 = document.querySelector(".landing__1"),
   card_2 = document.querySelector(".landing__2"),
+  card_3 = document.querySelector(".landing__3"),
+  card_4 = document.querySelector(".landing__4"),
   planButtons = document.querySelectorAll(".landing__plans"),
   planItems1 = document.querySelectorAll("table td:nth-of-type(2)"),
   planItems2 = document.querySelectorAll("table td:nth-of-type(3)"),
   planItems3 = document.querySelectorAll("table td:nth-of-type(4)"),
-  paths = document.querySelectorAll(".landing__tr path");
+  paths = document.querySelectorAll(".landing__tr path"),
+  landingButtons = document.querySelectorAll(".landing__button");
 
-//------- CONDICIONES INICIALES --------
+/*------- CONDICIONES INICIALES --------*/
+
 card_1.style.display = "none";
+card_2.style.display = "none";
+card_3.style.display = "none";
+card_4.style.display = "flex";
 
 planButtons.forEach((e, i) => {
   planButtons[i].classList.remove("after");
@@ -77,5 +84,13 @@ planButtons.forEach((e, i) => {
       });
       paths[i].style.fill = "var(--red)";
     }
+  });
+});
+
+landingButtons.forEach((e, i) => {
+  landingButtons[i].addEventListener("click", () => {
+    card_1.style.display = "flex";
+    card_2.style.display = "flex";
+    card_3.style.display = "flex";
   });
 });

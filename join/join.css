@@ -94,26 +94,54 @@ br {
   justify-content: center;
 }
 
+.landing__3 {
+  width: 100%;
+  padding: 1em 2em 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.landing__4 {
+  width: 100%;
+  padding: 1em 4em 3em;
+  display: flex;
+  justify-content: center;
+}
+
 .landing__card {
   display: flex;
   flex-direction: column;
 }
 
-.landing__card--1 {
-  padding: 0 0.5em;
+.landing__card--1,
+.landing__card--3 {
+  /* padding: 0 0.5em; */
+  padding: 0 1.5em;
+  max-width: 360px;
 }
 
 .landing__card--2 {
   max-width: 978px;
 }
 
+.landing__card--4 {
+  padding: 2em 2em 0;
+  /* align-items: center; */
+  /* max-width: 440px; */
+}
+
 .landing__img--container {
   margin-top: 30%;
 }
 
-.landing__img {
+.landing__img--1 {
   width: 50px;
   margin-bottom: 1.5em;
+}
+
+.landing__img--3 {
+  width: 260px;
+  margin-bottom: 2em;
 }
 
 .landing__steps--container,
@@ -135,9 +163,26 @@ br {
   margin-bottom: 1em;
 }
 
+.landing__h2--3 {
+  margin-bottom: 0.5em;
+}
+
 .landing__item {
   width: 90%;
   display: flex;
+  padding-bottom: 1em;
+}
+
+.landing__item--2 {
+  padding-bottom: 0;
+}
+
+.landing__item--4 {
+  flex-direction: column;
+}
+
+.landing__item--4 :first-child {
+  padding-bottom: 0.4em;
 }
 
 .landing__item p {
@@ -147,6 +192,22 @@ br {
 .landing__item p {
   line-height: 1.4;
   font-size: 18px;
+}
+
+.landing__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+}
+
+.landing__input {
+  width: auto;
+  height: 60px;
+  padding: 1em 0.5em;
+}
+
+.landing__form :first-child {
+  margin-bottom: 0.7em;
 }
 
 .landing__button {
@@ -275,6 +336,7 @@ br {
 .footer__center {
   width: 90%;
   max-width: 1050px;
+  padding: 0 1em;
 }
 
 .footer__a {
@@ -358,6 +420,22 @@ a:hover {
   .landing__steps,
   .landing__h2 {
     display: flex;
+    justify-content: center;
+  }
+
+  .landing__steps--2,
+  .landing__h2--2,
+  .landing__steps--4 {
+    justify-content: flex-start;
+  }
+
+  .landing__h2--3,
+  .landing__item--3 {
+    text-align: center;
+  }
+
+  .landing__item--3 {
+    margin: 0 auto;
   }
 
   .landing__plans--container {
